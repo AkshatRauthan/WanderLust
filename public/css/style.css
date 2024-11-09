@@ -1,0 +1,318 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.body-tag{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert {
+    width: fit-content !important;
+    min-width: 10rem !important;
+    margin: 0.25rem auto !important;
+}
+
+/* Navbar */
+.navbar{
+    height: 5rem;
+    background-color: white !important;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+    font-weight: 500 !important;
+}
+
+
+/* Footer */
+.f-info{
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    text-align: center;
+}
+
+.f-info-links, .f-info-socials{
+    width: 100%;
+}
+
+.f-info-socials i{
+    margin: 0 0.5rem 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.f-info-links a{
+    text-decoration: none !important;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline #222222 0.5px !important;
+}
+
+
+/* Buttons */
+.btn-edit {
+    background-color: #ff5a65 !important;
+    border: solid rgb(255, 32, 47) 2px !important;
+}
+
+.show-card{
+    padding: 0px !important;
+}
+
+
+/* Index Route : index.ejs */
+.scrool-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    align-self: center;
+    border-radius: 50%;
+    background-color: none;
+    /* border: 1px solid black; */
+}
+
+.scrool-buttons {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin:0 0.5rem 0.5rem 0.5rem;
+    cursor: pointer;
+    padding-bottom: 0.4rem;
+    font-size: 1.4rem;
+    background-color: #fff;
+    color: #fe424d;
+    border: solid 0.15rem #ff5a65;
+    opacity: 0.65;
+}
+
+.scrool-buttons:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+#filters{
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    /* background-color: aquamarine; */
+    width: 90vw;
+}
+
+.options{
+    scroll-behavior: smooth;
+    display: flex;
+    height: max-content;
+    /* margin-top: 1rem; */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 93%;
+}
+
+.filter{
+    text-align: center;
+    padding: 0.75rem;
+    opacity: 0.775;
+    margin: 0 0.25rem 0 0.25rem;
+    color: #fe424d;
+}
+
+.selected-filter{
+    transform: scale(1.125);
+    opacity: 1;
+}
+
+.filter>p{
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0px;
+}
+
+.filter:hover{
+    cursor: pointer;
+    transform: scale(1.125);
+}
+
+.form-check-label{
+    font-size: 0.85rem !important;
+}
+
+.tax-info{
+    display: none;
+}
+
+.tax-toggler{
+    border:1px solid black;
+    border-radius: 1rem;
+    padding: 0.8rem 1.2rem;
+    align-self: center;
+    justify-self:right;
+}
+
+#listings-container {
+    width: 85vw;
+}
+
+.listing-card{
+    border: none !important;    
+    width: 20rem !important;
+    padding: 1rem !important;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    height: 14rem !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0 !important;
+    font-weight: 500 !important;
+}
+
+.listing-links{
+    text-decoration: none;
+}
+
+.card-img-overlay{
+    opacity: 0 !important;
+    background-color: white !important;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2 !important;
+}
+
+
+/* Show Route : show.ejs */
+.show-img{
+    height: 55vh !important;
+}
+
+.btns {
+    display: flex;
+}
+
+#map { 
+    height: 50vh;
+}
+
+
+/* New Route : newListing.ejs */
+.input-feedback{
+    display: flex !important;
+    align-items: center !important;
+}
+
+
+/* Edit Route : editListing.ejs */
+.preview-image{
+    border-radius: 2rem;
+    object-fit: cover;
+    width: 450px;
+    max-height: 300px;
+}
+
+/* Multiple Tags Selection */
+
+/* Container for dropdown */
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+/* Dropdown button styled like file input */
+.dropdown-button {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin-right: 8px;
+}
+/* Display selected values styled like the "No file chosen" box */
+
+.dropdown-button{
+    margin: 0;
+    background-color: #f9f9f9;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: none;
+}
+.selected-values {
+    flex: 1;
+    flex-direction: column;
+    height: 2.55rem;
+    align-content: space-around;
+    padding: 0rem 0rem 0rem 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 0 5px 5px 0;
+}
+/* Hidden dropdown */
+#dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    width: 200px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 4px;
+    z-index: 1;
+    border-radius: 5px;
+}
+/* Style for each option in the dropdown */
+.dropdown-option {
+    padding: 8px;
+    padding-left: 16px;
+    cursor: pointer;
+    margin: 2px;
+    border-radius: 5px;
+}
+.dropdown-option:hover {
+    background-color: #e0e0e0;
+}
+/* Selected option pills */
+.selected-pill {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-right: 4px;
+    margin-top: 4px;
+    background-color: rgba(255, 32, 47, 0.9);
+    color: #fff;
+    border-radius: 12px;
+    font-size: 12px;
+}
+.selected-pill .remove {
+    margin-left: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.selected-options, .selected-options:hover {
+    background-color: rgba(255, 32, 47, 0.9);
+    color: white;
+}
