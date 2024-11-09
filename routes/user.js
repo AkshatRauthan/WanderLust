@@ -21,4 +21,7 @@ router.route(`/login`)
 // 03. Logout Route : Logout Current User
 router.get("/logout", userController.logoutUser);
 
+
+// 04. Request For Index Route : Redirect To Home Page
+router.get("/", userController.renderHomePage);
 module.exports = router;

@@ -48,3 +48,7 @@ module.exports.logoutUser = (req, res, next) => {
         }
     })
 };
+
+module.exports.renderHomePage = (req, res) => {
+    res.redirect("/listings");
+};
