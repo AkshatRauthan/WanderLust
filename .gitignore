@@ -2,3 +2,4 @@
 .env
 /.vscode
 /init/.env
+getAllSessionsInfo.js

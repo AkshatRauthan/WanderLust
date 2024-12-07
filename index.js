@@ -82,26 +82,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// Test Part Start
-
-app.get('/newForm', (req, res) => {
-    const options = [
-        { value: 'teacher', label: 'Teacher' },
-        { value: 'student', label: 'Student' },
-        { value: 'SDE', label: 'Software Developer' },
-        { value: 'developer', label: 'Web Developer' },
-        { value: 'game developer', label: 'Game Developer' }
-    ];
-    res.render("b.ejs", {options});
-});
-
-app.post('/actions', (req, res) => {
-    console.log(req.body);
-    res.send("Got The Data");
-});
-
-// Test Part End
-
 app.use(`/listings/:id/reviews`, reviewRouter);
 app.use(`/listings`, listingRouter);
 app.use(`/`, userRouter);
